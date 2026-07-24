@@ -1,0 +1,297 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#000;
+    color:white;
+    overflow-x:hidden;
+}
+
+#particles-js{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:90%;
+    max-width:1000px;
+    padding:15px 25px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(0,255,204,0.2);
+    border-radius:50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+.logo{
+    color:#00ffcc;
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    font-size:20px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00ffcc;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #00ffcc;
+    box-shadow:0 0 25px #00ffcc;
+    animation:float 4s ease-in-out infinite;
+}
+
+.status{
+    margin-top:20px;
+    padding:10px 20px;
+    border-radius:30px;
+    background:rgba(0,255,204,0.1);
+    border:1px solid rgba(0,255,204,0.3);
+}
+
+.hero h1{
+    color:#00ffcc;
+    font-size:60px;
+    margin-top:20px;
+}
+
+.typing{
+    margin-top:15px;
+    font-size:24px;
+    color:white;
+}
+
+.college{
+    margin-top:15px;
+    color:#bdbdbd;
+    line-height:1.8;
+}
+
+.hero-icons{
+    margin-top:25px;
+    display:flex;
+    gap:20px;
+}
+
+.hero-icons a{
+    color:#00ffcc;
+    font-size:30px;
+}
+
+/* SECTIONS */
+
+section{
+    padding:100px 10%;
+}
+
+.title{
+    color:#00ffcc;
+    font-size:40px;
+    margin-bottom:40px;
+    position:relative;
+}
+
+.title::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-10px;
+    width:80px;
+    height:4px;
+    background:#00ffcc;
+    border-radius:20px;
+}
+
+/* ABOUT */
+
+.about-card{
+    background:#081512;
+    padding:30px;
+    border-radius:20px;
+    border:1px solid rgba(0,255,204,0.2);
+    line-height:1.8;
+}
+
+/* EDUCATION */
+
+.edu-item{
+    margin-bottom:70px;
+}
+
+.edu-item h3{
+    color:#00ffcc;
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.edu-item span{
+    color:#9a9a9a;
+    font-size:22px;
+    display:block;
+    margin-bottom:20px;
+}
+
+.edu-item p{
+    color:#cfcfcf;
+    font-size:22px;
+    line-height:1.8;
+}
+
+/* SKILLS */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.skills span{
+    border:1px solid #00ffcc;
+    padding:12px 20px;
+    border-radius:30px;
+    color:#00ffcc;
+}
+
+/* PROJECTS */
+
+.project-card{
+    background:#081512;
+    border-radius:20px;
+    overflow:hidden;
+    margin-bottom:30px;
+    border:1px solid rgba(0,255,204,0.2);
+    transition:.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(0,255,204,0.3);
+}
+
+.project-card img{
+    width:100%;
+    display:block;
+}
+
+.project-card h3{
+    color:#00ffcc;
+    padding:20px 20px 10px;
+}
+
+.project-card p{
+    padding:0 20px 20px;
+}
+
+/* CONTACT */
+
+.contact-icons{
+    display:flex;
+    gap:25px;
+}
+
+.contact-icons a{
+    color:#00ffcc;
+    font-size:35px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#888;
+}
+
+/* ANIMATIONS */
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .typing{
+        font-size:18px;
+    }
+
+    nav{
+        width:95%;
+        padding:12px;
+    }
+
+    nav ul{
+        gap:12px;
+    }
+
+    .edu-item h3{
+        font-size:24px;
+    }
+
+    .edu-item span,
+    .edu-item p{
+        font-size:16px;
+    }
+
+    .title{
+        font-size:30px;
+    }
+}
